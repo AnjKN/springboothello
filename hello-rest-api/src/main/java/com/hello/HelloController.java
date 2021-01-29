@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 
-@RestController("/hello")
+@RestController
 public class HelloController {
 
-	@GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+	@GetMapping(value="/hello",produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<String> getEmployeeDetails() {		
 		
 		return new ResponseEntity<String>("Hello user!",HttpStatus.OK);
